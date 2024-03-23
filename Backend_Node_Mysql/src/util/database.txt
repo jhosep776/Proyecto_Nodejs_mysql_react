@@ -1,0 +1,38 @@
+CREATE DATABASE backend_node_mysql;
+USE backend_node_mysql;
+
+CREATE TABLE roles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    fech_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO roles (name) VALUES ('User');
+ 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    fech_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    state INT,
+    rol_id INT,
+    FOREIGN KEY (rol_id) REFERENCES roles(id)
+);
+
+
+CREATE TABLE brands (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    fech_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+	price decimal(10,2),
+	brand_id INT,
+    fech_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY ( brand_id) REFERENCES brands(id)
+);

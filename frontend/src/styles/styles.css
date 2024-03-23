@@ -1,0 +1,42 @@
+.gradient-container {
+  background: linear-gradient(
+    to bottom,
+    #060606,
+    #0033ff
+  ); /* Degradado de negro a un tono más oscuro */
+  color: #fff; /* Color de texto blanco */
+  height: 100vh; /* Altura igual al 100% de la altura de la ventana */
+  margin: 0; /* Elimina el margen predeterminado */
+  display: flex; /* Usa flexbox para centrar verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+.login-container {
+  border: 1px solid #fff; /* Contorno blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 100%; /* Ancho máximo del contenedor del formulario */
+  height: 100%;
+  max-width: 400px; /* Ancho máximo del formulario */
+  background: linear-gradient(
+    to bottom,
+    #060606,
+    #0033ff
+  ); /* Degradado de negro a un tono más oscuro */
+}
+.input_text_login {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+ 
+.button_login {
+   
+  width: 100%;
+}
+
+ 
